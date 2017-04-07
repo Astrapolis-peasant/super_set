@@ -19,7 +19,7 @@ SECRET_KEY = '\2\1thisismyscretkey\1\2\e\y\y\h'  # noqa
 # Superset metadata (slices, connections, tables, dashboards, ...).
 # Note that the connection information to connect to the datasources
 # you want to explore are managed directly in the web UI
-SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
-
+SQLALCHEMY_DATABASE_URI = 'postgresql://bonan:ybn1992615@tudiio.ceo7x9fchbd7.us-east-1.rds.amazonaws.com:5432/tupai_list'
+MAPBOX_API_KEY = 'pk.eyJ1IjoiYm9uYW55IiwiYSI6ImNqMTczeW9zNzA0OWEzOG9kOTc4MDR5NGwifQ.1KjCtkIS4swYYL9ht5qDww	'
 # Flask-WTF flag for CSRF
 CSRF_ENABLED = True
