@@ -1,8 +1,6 @@
 import os
 import sys
 from superset import config
-import shutil
-import stat
 from copy_replace_files import copytree
 
 # BASE_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -28,7 +26,8 @@ SECRET_KEY = '\2\1thisismyscretkey\1\2\e\y\y\h'  # noqa
 # Superset metadata (slices, connections, tables, dashboards, ...).
 # Note that the connection information to connect to the datasources
 # you want to explore are managed directly in the web UI
-SQLALCHEMY_DATABASE_URI = 'postgresql://admin:admin@localhost:5432/superset'
+SQLALCHEMY_DATABASE_URI = 'postgresql://bonan:ybn1992615@tudiio.ceo7x9fchbd7.us-east-1.rds.amazonaws.com:5432/superset'
+# SQLALCHEMY_DATABASE_URI = 'postgresql://admin:admin@localhost:5432/superset'
 MAPBOX_API_KEY = 'pk.eyJ1IjoiYm9uYW55IiwiYSI6ImNqMTczeW9zNzA0OWEzOG9kOTc4MDR5NGwifQ.1KjCtkIS4swYYL9ht5qDww'
 # Flask-WTF flag for CSRF
 CSRF_ENABLED = False
