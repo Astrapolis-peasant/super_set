@@ -42,6 +42,10 @@ LANGUAGES = {
     'zh': {'flag': 'cn', 'name': 'Chinese'},
 }
 
+#config the cache
+CACHE_CONFIG = {'CACHE_TYPE': 'redis'}
+
+
 # config.APP_ICON = "/static_files/tudi.png"
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 superset_path = config.BASE_DIR

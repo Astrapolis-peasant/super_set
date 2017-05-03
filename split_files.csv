@@ -1,0 +1,27 @@
+import pandas
+import os
+
+def to_files(_file):
+    df = pandas.read_csv(_file)
+    result = []
+    for i in df.values.tolist():
+        record = i[:3]
+        record.append(str(i[3]).split(' ')[0])
+        record.append(' '.join(str(i[3]).split(' ')[1:]))
+        record.extend(i[4:])
+        result.append(record)
+    header = df.columns.values.tolist()
+    columns = header[:3]+['First_Name','Last_name']+header[4:]
+    name = result[0][0]
+    for i in range(3):
+        lenth = len(result)/3
+        split_s = lenth*i 
+        split_e = lenth*(i+1) if lenth*(i+1) < len(result) else len(result)
+        pandas.DataFrame(result[lenth*i:]).to_csv(name+'_{}.csv'.format(i+1), header=columns)
+
+
+if __name__ == "__main__":
+	dirc = os.getcwd()
+	for _file in os.listdir(dirc):
+	     if _file.startswith("Phone"):
+	            to_files(_file)
